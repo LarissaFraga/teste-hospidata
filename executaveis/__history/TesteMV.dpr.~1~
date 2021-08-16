@@ -1,0 +1,14 @@
+program TesteMV;
+
+uses
+  Vcl.Forms,
+  view_frmPrincipal in '..\fontes\view\view_frmPrincipal.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

@@ -1,0 +1,20 @@
+object Conexao: TConexao
+  OldCreateOrder = False
+  Height = 219
+  Width = 429
+  object Conexao: TFDConnection
+    Params.Strings = (
+      'Database=hospidata'
+      'User_Name=postgres'
+      'Password=123456'
+      'DriverID=PG')
+    Connected = True
+    Left = 32
+    Top = 8
+  end
+  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
+    VendorHome = 'C:\Program Files\PostgreSQL\9.6\data'
+    Left = 112
+    Top = 8
+  end
+end
