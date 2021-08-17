@@ -1,0 +1,25 @@
+unit Empregados;
+
+interface
+
+type
+  TEmpregados = class
+  private
+    FcodigoEmpregado: Integer;
+    FcodigoDepartamento: Integer;
+    FcodigoSuperior: Integer;
+    FnomeEmpregado: String;
+    FnomeFuncao: String;
+    FdataAdmissao: TDate;
+    Fsalario: Double;
+    Fcomissao: Double;
+
+    procedure setCodigoEmpregado(const Value: Integer);
+    procedure setCodigoDepartamento(const Value: Integer);
+    procedure setCodigoSuperior(const Value: Integer);
+    procedure setNomeEmpregado(const Value: String);
+    procedure setNomeFuncao(const Value: String);
+  end;
+implementation
+
+end.

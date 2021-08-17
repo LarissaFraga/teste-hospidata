@@ -1,0 +1,12 @@
+unit Departamentos;
+
+interface
+
+type
+  TDepartamentos = class
+  private
+
+  end;
+implementation
+
+end.

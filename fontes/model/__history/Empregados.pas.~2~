@@ -1,0 +1,19 @@
+unit Empregados;
+
+interface
+
+type
+  TEmpregados = class
+  private
+    FcodigoEmpregado: Integer;
+    FcodigoDepartamento: Integer;
+    FcodigoSuperior: Integer;
+    FnomeEmpregado: String;
+    FnomeFuncao: String;
+    FdataAdmissao: TDate;
+    Fsalario: Double;
+    Fcomissao: Double;
+  end;
+implementation
+
+end.

@@ -1,0 +1,26 @@
+unit Departamentos;
+
+interface
+
+type
+  TDepartamentos = class
+  private
+    FcodigoDepartamento: Integer;
+    FnomeDepartamento: String;
+    FlocalDepartamento: String;
+
+    procedure setCodigoDepartamento(const Value: Integer);
+    procedure setNomeDepartamento(const Value: String);
+    procedure setLocalDepartamento(const Value: String);
+
+  public
+    property codigoDepartamento: Integer read FcodigoDepartamento
+      write setCodigoDepartamento;
+    property nomeDepartamento: String read FnomeDepartamento
+      write setNomeDepartamento;
+    property localDepartamento: String read FlocalDepartamento
+      write setLocalDepartamento;
+  end;
+implementation
+
+end.
