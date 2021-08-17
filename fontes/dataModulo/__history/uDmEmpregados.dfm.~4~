@@ -1,0 +1,10 @@
+object DmEmpregados: TDmEmpregados
+  OldCreateOrder = False
+  Height = 225
+  Width = 475
+  object sqlInserir: TFDQuery
+    Connection = Conexao.Conexao
+    Left = 168
+    Top = 48
+  end
+end
