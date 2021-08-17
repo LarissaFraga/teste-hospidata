@@ -1,0 +1,29 @@
+unit view_FrmEmpregados;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Vcl.Grids,
+  Vcl.DBGrids;
+
+type
+  TCadastroEmpregados = class(TForm)
+    btnVoltar: TButton;
+    btnLimpar: TButton;
+    btnCadastrar: TButton;
+    DBGEmpregados: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  CadastroEmpregados: TCadastroEmpregados;
+
+implementation
+
+{$R *.dfm}
+
+end.

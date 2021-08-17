@@ -1,0 +1,43 @@
+unit view_FrmEmpregados;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TCadastroEmpregados = class(TForm)
+    btnVoltar: TButton;
+    btnLimpar: TButton;
+    btnCadastrar: TButton;
+    DBGEmpregados: TDBGrid;
+    labelCodDepartamento: TLabel;
+    Edit1: TEdit;
+    labelCodigoSuperior: TLabel;
+    Edit2: TEdit;
+    labelNome: TLabel;
+    Edit3: TEdit;
+    labelFuncao: TLabel;
+    Edit4: TEdit;
+    labelDataAdmissao: TLabel;
+    labelSalario: TLabel;
+    labelComissao: TLabel;
+    DBEdit3: TDBEdit;
+    MaskEdit1: TMaskEdit;
+    MaskEdit2: TMaskEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  CadastroEmpregados: TCadastroEmpregados;
+
+implementation
+
+{$R *.dfm}
+
+end.
