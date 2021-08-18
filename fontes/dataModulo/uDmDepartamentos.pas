@@ -11,6 +11,8 @@ uses
 type
   TDmDepartamentos = class(TDataModule)
     sqlInserir: TFDQuery;
+    sqlListar: TFDQuery;
+    DSDepartamentos: TDataSource;
   private
     { Private declarations }
   public

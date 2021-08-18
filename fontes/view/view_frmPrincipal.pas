@@ -12,6 +12,8 @@ type
     btnEmpregados: TButton;
     btnDepartamentos: TButton;
     btnGerarRelatorio: TButton;
+    procedure btnDepartamentosClick(Sender: TObject);
+    procedure btnEmpregadosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,5 +26,19 @@ var
 implementation
 
 {$R *.dfm}
+
+uses view_frmDepartamentos, view_FrmEmpregados;
+
+procedure TMenuPrincipal.btnDepartamentosClick(Sender: TObject);
+begin
+  CadastroDepartamentos := TCadastroDepartamentos.Create(Application);
+  CadastroDepartamentos.Show;
+end;
+
+procedure TMenuPrincipal.btnEmpregadosClick(Sender: TObject);
+begin
+  CadastroEmpregados := TCadastroEmpregados.Create(Application);
+  CadastroEmpregados.Show;
+end;
 
 end.

@@ -46,6 +46,8 @@ object CadastroDepartamentos: TCadastroDepartamentos
     Top = 120
     Width = 675
     Height = 153
+    DataSource = DmDepartamentos.DSDepartamentos
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -54,43 +56,39 @@ object CadastroDepartamentos: TCadastroDepartamentos
     TitleFont.Style = []
     Columns = <
       item
+        Alignment = taLeftJustify
         Expanded = False
-        FieldName = 'Codigo'
+        FieldName = 'codigo'
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Nome'
+        FieldName = 'nome'
+        Width = 300
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Local'
+        FieldName = 'local'
+        Width = 275
         Visible = True
       end>
   end
-  object btnVoltar: TButton
+  object btnLimpar: TButton
     Left = 593
     Top = 294
     Width = 75
     Height = 50
-    Caption = 'Voltar'
-    TabOrder = 3
-  end
-  object btnLimpar: TButton
-    Left = 504
-    Top = 294
-    Width = 75
-    Height = 50
     Caption = 'Limpar'
-    TabOrder = 4
+    TabOrder = 3
+    OnClick = btnLimparClick
   end
   object btnCadastrar: TButton
-    Left = 414
+    Left = 503
     Top = 294
     Width = 75
     Height = 50
     Caption = 'Cadastrar'
-    TabOrder = 5
+    TabOrder = 4
   end
 end

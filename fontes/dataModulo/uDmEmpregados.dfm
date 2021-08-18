@@ -1,7 +1,7 @@
 object DmEmpregados: TDmEmpregados
   OldCreateOrder = False
-  Height = 116
-  Width = 222
+  Height = 129
+  Width = 267
   object sqlInserir: TFDQuery
     Connection = Conexao.Conexao
     SQL.Strings = (
@@ -56,5 +56,23 @@ object DmEmpregados: TDmEmpregados
         ParamType = ptInput
         Value = Null
       end>
+  end
+  object sqlListar: TFDQuery
+    Active = True
+    Connection = Conexao.Conexao
+    SQL.Strings = (
+      'select id_empregado as Codigo,'
+      'cod_departamento as Codigo_Departamento,'
+      'cod_emp_funcao as Codigo_Superior,'
+      'nm_empregado as Nome_Empregado,'
+      'nm_funcao as Nome_Funcao'
+      'from empregados')
+    Left = 112
+    Top = 32
+  end
+  object DSEmpregados: TDataSource
+    DataSet = sqlListar
+    Left = 184
+    Top = 32
   end
 end

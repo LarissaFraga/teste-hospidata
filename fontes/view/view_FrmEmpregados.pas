@@ -9,7 +9,6 @@ uses
 
 type
   TCadastroEmpregados = class(TForm)
-    btnVoltar: TButton;
     btnLimpar: TButton;
     btnCadastrar: TButton;
     DBGEmpregados: TDBGrid;
@@ -27,6 +26,7 @@ type
     maskEditDataEmissao: TMaskEdit;
     maskEditComissao: TMaskEdit;
     maskEditSalario: TMaskEdit;
+    procedure btnLimparClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,5 +39,18 @@ var
 implementation
 
 {$R *.dfm}
+
+uses uDmEmpregados;
+
+procedure TCadastroEmpregados.btnLimparClick(Sender: TObject);
+begin
+  editCodDepartamento.Clear;
+  editNome.Clear;
+  editCodigoSuperior.Clear;
+  editFuncao.Clear;
+  maskEditDataEmissao.Clear;
+  maskEditComissao.Clear;
+  maskEditSalario.Clear;
+end;
 
 end.

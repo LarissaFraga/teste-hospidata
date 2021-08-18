@@ -11,6 +11,8 @@ uses
 type
   TDmEmpregados = class(TDataModule)
     sqlInserir: TFDQuery;
+    sqlListar: TFDQuery;
+    DSEmpregados: TDataSource;
   private
     { Private declarations }
   public

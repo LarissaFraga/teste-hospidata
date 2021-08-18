@@ -20,6 +20,7 @@ object MenuPrincipal: TMenuPrincipal
     Height = 73
     Caption = 'Cadastrar Empregados'
     TabOrder = 0
+    OnClick = btnEmpregadosClick
   end
   object btnDepartamentos: TButton
     Left = 24
@@ -28,6 +29,7 @@ object MenuPrincipal: TMenuPrincipal
     Height = 73
     Caption = 'Cadastrar Departamentos'
     TabOrder = 1
+    OnClick = btnDepartamentosClick
   end
   object btnGerarRelatorio: TButton
     Left = 344

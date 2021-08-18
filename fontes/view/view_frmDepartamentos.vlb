@@ -1,19 +1,28 @@
 ﻿[labelLocal]
-Coordinates=10,78,73,58
+Coordinates=10,78,64,51
 
 [labelDepartamento]
-Coordinates=64,10,123,58
+Coordinates=64,10,107,51
 
 []
-Coordinates=253,56,91,36
+Coordinates=306,71,82,33
 
 [DBGDepartamentos]
-Coordinates=93,78,64,36
+Coordinates=310,90,112,33
 Visible=True
 
 [edtNome]
-Coordinates=197,10,44,58
+Coordinates=197,10,58,51
 
 [edtLocal]
-Coordinates=10,10,44,58
+Coordinates=10,10,56,51
+
+[btnLimpar]
+Coordinates=121,80,64,51
+
+[btnCadastrar]
+Coordinates=190,80,78,51
+
+[DmDepartamentos.sqlListar]
+Coordinates=306,1,151,51
 

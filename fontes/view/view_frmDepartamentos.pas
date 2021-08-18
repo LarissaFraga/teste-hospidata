@@ -14,9 +14,9 @@ type
     edtNome: TEdit;
     edtLocal: TEdit;
     DBGDepartamentos: TDBGrid;
-    btnVoltar: TButton;
     btnLimpar: TButton;
     btnCadastrar: TButton;
+    procedure btnLimparClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,5 +29,13 @@ var
 implementation
 
 {$R *.dfm}
+
+uses uDmDepartamentos;
+
+procedure TCadastroDepartamentos.btnLimparClick(Sender: TObject);
+begin
+  edtNome.Clear;
+  edtLocal.Clear;
+end;
 
 end.
