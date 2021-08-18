@@ -46,6 +46,8 @@ object CadastroDepartamentos: TCadastroDepartamentos
     Top = 120
     Width = 675
     Height = 153
+    DataSource = DmDepartamentos.DSDepartamentos
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -54,18 +56,21 @@ object CadastroDepartamentos: TCadastroDepartamentos
     TitleFont.Style = []
     Columns = <
       item
+        Alignment = taLeftJustify
         Expanded = False
-        FieldName = 'Codigo'
+        FieldName = 'codigo'
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Nome'
+        FieldName = 'nome'
+        Width = 300
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Local'
+        FieldName = 'local'
+        Width = 275
         Visible = True
       end>
   end

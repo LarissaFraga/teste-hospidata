@@ -1,0 +1,30 @@
+unit uDepartamentosController;
+
+interface
+
+uses Departamentos;
+
+type
+  TDepartamentosController = class
+
+  public
+    function Cadastrar (Nome, Local: String): Boolean;
+  end;
+implementation
+
+var
+  Departamentos: TDepartamentos;
+
+function TDepartamentosController.Cadastrar(Nome, Local: String): Boolean;
+begin
+  try
+    Departamentos := TDepartamentos.Create;
+    Departamentos.nomeDepartamento := Nome;
+    Departamentos.localDepartamento := Local;
+    //Result := dmCliente.Cadastrar(Cliente);
+  finally
+    Departamentos := nil;
+  end;
+end;
+
+end.

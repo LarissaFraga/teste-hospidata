@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Vcl.ExtCtrls,
-  Vcl.Grids, Vcl.DBGrids;
+  Vcl.Grids, Vcl.DBGrids, Vcl.DBCtrls;
 
 type
   TCadastroDepartamentos = class(TForm)
@@ -17,6 +17,7 @@ type
     btnLimpar: TButton;
     btnCadastrar: TButton;
     procedure btnLimparClick(Sender: TObject);
+    procedure btnCadastrarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,6 +30,15 @@ var
 implementation
 
 {$R *.dfm}
+
+uses uDepartamentosController, uDmDepartamento;
+
+procedure TCadastroDepartamentos.btnCadastrarClick(Sender: TObject);
+begin
+  uDmDepartamento.DmDepartamento.sqlInserir.ParamByName('NM_DEPARTAMENTO').AsString := edtNome.Text;
+  uDmDepartamento.DmDepartamento.sqlInserir.ParamByName('LOCAL').AsString := edtLocal.Text;
+  uDmDepartamento.DmDepartamento.sqlInserir.ExecSQL;
+end;
 
 procedure TCadastroDepartamentos.btnLimparClick(Sender: TObject);
 begin

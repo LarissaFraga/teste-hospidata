@@ -46,7 +46,7 @@ object CadastroDepartamentos: TCadastroDepartamentos
     Top = 120
     Width = 675
     Height = 153
-    DataSource = DmDepartamentos.DSDepartamentos
+    DataSource = DmDepartamento.DSDepartamentos
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
@@ -90,5 +90,6 @@ object CadastroDepartamentos: TCadastroDepartamentos
     Height = 50
     Caption = 'Cadastrar'
     TabOrder = 4
+    OnClick = btnCadastrarClick
   end
 end

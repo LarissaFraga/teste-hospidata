@@ -11,6 +11,7 @@ object CadastroEmpregados: TCadastroEmpregados
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object labelCodDepartamento: TLabel
@@ -78,6 +79,7 @@ object CadastroEmpregados: TCadastroEmpregados
     Height = 50
     Caption = 'Cadastrar'
     TabOrder = 1
+    OnClick = btnCadastrarClick
   end
   object DBGEmpregados: TDBGrid
     Left = 0

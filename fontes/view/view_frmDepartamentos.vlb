@@ -5,7 +5,7 @@ Coordinates=10,78,64,51
 Coordinates=64,10,107,51
 
 []
-Coordinates=306,71,82,33
+Coordinates=351,1,82,33
 
 [DBGDepartamentos]
 Coordinates=310,90,112,33
@@ -25,4 +25,13 @@ Coordinates=190,80,78,51
 
 [DmDepartamentos.sqlListar]
 Coordinates=306,1,151,51
+
+[DmDepartamento.DSDepartamentos]
+Coordinates=332,142,192,33
+
+[DmDepartamento.sqlInserir]
+Coordinates=390,10,149,51
+
+[DmDepartamento.sqlListar]
+Coordinates=500,80,145,105
 

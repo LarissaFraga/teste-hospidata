@@ -1,0 +1,37 @@
+unit uEmpregadosController;
+
+interface
+
+type
+  TEmpregadosController = class
+
+  public
+    function Cadastrar (CodDepartamento, CodSuperior: Integer; NomeEmpregado,
+      Funcao: String; DataAdmissao: TDate; Salario, Comissao: Double): Boolean;
+  end;
+implementation
+
+uses uDmEmpregados, Empregados;
+
+var
+  Empregado: TEmpregados;
+
+function TEmpregadosController.Cadastrar(CodDepartamento, CodSuperior: Integer;
+      NomeEmpregado, Funcao: String; DataAdmissao: TDate; Salario,
+      Comissao: Double): Boolean;
+begin
+  try
+    Empregado := TEmpregados.Create;
+    Empregado.codigoDepartamento := CodDepartamento;
+    Empregado.codigoSuperior := CodSuperior;
+    Empregado.nomeEmpregado := NomeEmpregado;
+    Empregado.nomeFuncao := Funcao;
+    Empregado.dataAdmissao := DataAdmissao;
+    Empregado.salario := Salario;
+    Empregado.comissao := Comissao;
+  finally
+    Empregado := nil;
+  end;
+end;
+
+end.

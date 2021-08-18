@@ -11,6 +11,7 @@ object CadastroEmpregados: TCadastroEmpregados
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object labelCodDepartamento: TLabel
@@ -45,7 +46,7 @@ object CadastroEmpregados: TCadastroEmpregados
     Left = 24
     Top = 78
     Width = 89
-    Height = 14
+    Height = 13
     Caption = 'Data de admiss'#227'o:'
   end
   object labelSalario: TLabel
@@ -62,36 +63,32 @@ object CadastroEmpregados: TCadastroEmpregados
     Height = 13
     Caption = 'Comiss'#227'o:'
   end
-  object btnVoltar: TButton
-    Left = 599
-    Top = 328
-    Width = 75
-    Height = 50
-    Caption = 'Voltar'
-    TabOrder = 0
-  end
   object btnLimpar: TButton
-    Left = 510
+    Left = 600
     Top = 328
     Width = 75
     Height = 50
     Caption = 'Limpar'
-    TabOrder = 1
+    TabOrder = 0
+    OnClick = btnLimparClick
   end
   object btnCadastrar: TButton
-    Left = 420
+    Left = 510
     Top = 328
     Width = 75
     Height = 50
     Caption = 'Cadastrar'
-    TabOrder = 2
+    TabOrder = 1
+    OnClick = btnCadastrarClick
   end
   object DBGEmpregados: TDBGrid
     Left = 0
     Top = 153
     Width = 685
     Height = 153
-    TabOrder = 3
+    DataSource = DmEmpregados.DSEmpregados
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -99,100 +96,100 @@ object CadastroEmpregados: TCadastroEmpregados
     TitleFont.Style = []
     Columns = <
       item
-        Alignment = taCenter
+        Alignment = taLeftJustify
         Expanded = False
-        FieldName = 'Codigo'
-        Width = 70
+        FieldName = 'codigo'
+        Width = 125
         Visible = True
       end
       item
-        Alignment = taCenter
+        Alignment = taLeftJustify
         Expanded = False
-        FieldName = 'Cod_Departamento'
-        Width = 120
+        FieldName = 'codigo_departamento'
+        Width = 125
         Visible = True
       end
       item
-        Alignment = taCenter
+        Alignment = taLeftJustify
         Expanded = False
-        FieldName = 'Cod_Emp_Funcao'
-        Width = 120
+        FieldName = 'codigo_superior'
+        Width = 125
         Visible = True
       end
       item
-        Alignment = taCenter
         Expanded = False
-        FieldName = 'Nm_Empregado'
-        Width = 120
+        FieldName = 'nome_empregado'
+        Width = 145
         Visible = True
       end
       item
-        Alignment = taCenter
         Expanded = False
-        FieldName = 'Nm_Funcao'
-        Width = 120
+        FieldName = 'nome_funcao'
+        Width = 125
         Visible = True
       end>
   end
-  object Edit1: TEdit
+  object editCodDepartamento: TEdit
     Left = 139
     Top = 21
     Width = 121
     Height = 21
-    TabOrder = 4
-    Text = 'Edit1'
+    NumbersOnly = True
+    TabOrder = 3
   end
-  object Edit2: TEdit
+  object editCodigoSuperior: TEdit
     Left = 420
     Top = 21
     Width = 121
     Height = 21
-    TabOrder = 5
-    Text = 'Edit1'
+    NumbersOnly = True
+    TabOrder = 4
   end
-  object Edit3: TEdit
+  object editNome: TEdit
     Left = 139
+    Top = 48
+    Width = 121
+    Height = 21
+    TabOrder = 5
+  end
+  object editFuncao: TEdit
+    Left = 420
     Top = 48
     Width = 121
     Height = 21
     TabOrder = 6
-    Text = 'Edit1'
   end
-  object Edit4: TEdit
-    Left = 420
-    Top = 48
-    Width = 121
-    Height = 21
-    TabOrder = 7
-    Text = 'Edit1'
-  end
-  object DBEdit3: TDBEdit
-    Left = 420
-    Top = 75
-    Width = 121
-    Height = 21
-    TabOrder = 8
-  end
-  object MaskEdit1: TMaskEdit
+  object maskEditDataEmissao: TMaskEdit
     Left = 139
     Top = 75
-    Width = 120
+    Width = 117
     Height = 21
     Hint = 'aaaa-mm-dd'
     EditMask = '!0000-00-00;1;_'
     MaxLength = 10
-    TabOrder = 9
+    TabOrder = 7
     Text = '    -  -  '
   end
-  object MaskEdit2: TMaskEdit
+  object maskEditComissao: TMaskEdit
     Left = 139
     Top = 102
-    Width = 120
+    Width = 118
     Height = 21
     Hint = 'aaaa-mm-dd'
-    EditMask = '!0000-00-00;1;_'
-    MaxLength = 10
-    TabOrder = 10
-    Text = '    -  -  '
+    EditMask = '9999,99;1;_'
+    MaxLength = 7
+    TabOrder = 8
+    Text = '    ,  '
+  end
+  object maskEditSalario: TMaskEdit
+    Left = 420
+    Top = 75
+    Width = 118
+    Height = 21
+    Hint = 'aaaa-mm-dd'
+    EditMask = '9999,99;1;_'
+    MaxLength = 7
+    TabOrder = 9
+    Text = '    ,  '
   end
 end

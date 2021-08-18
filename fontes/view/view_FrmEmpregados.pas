@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Vcl.Grids,
-  Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls;
+  Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls, uDmEmpregados, uEmpregadosController;
 
 type
   TCadastroEmpregados = class(TForm)
@@ -27,6 +27,8 @@ type
     maskEditComissao: TMaskEdit;
     maskEditSalario: TMaskEdit;
     procedure btnLimparClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btnCadastrarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,12 +37,20 @@ type
 
 var
   CadastroEmpregados: TCadastroEmpregados;
+  EmpregadoController: TEmpregadosController;
 
 implementation
 
 {$R *.dfm}
 
-uses uDmEmpregados;
+procedure TCadastroEmpregados.btnCadastrarClick(Sender: TObject);
+begin
+  EmpregadoController := uEmpregadosController.TEmpregadosController.Create;
+  EmpregadoController.Cadastrar(StrToInt(editCodDepartamento.Text),StrToInt(editCodigoSuperior.Text),
+    editNome.Text, editFuncao.Text,StrToDate(maskEditDataEmissao.Text),StrToFloat(maskEditSalario.Text),
+    StrToFloat(maskEditSalario.Text));
+  ShowMessage('Cadastro concluído');
+end;
 
 procedure TCadastroEmpregados.btnLimparClick(Sender: TObject);
 begin
@@ -51,6 +61,11 @@ begin
   maskEditDataEmissao.Clear;
   maskEditComissao.Clear;
   maskEditSalario.Clear;
+end;
+
+procedure TCadastroEmpregados.FormCreate(Sender: TObject);
+begin
+  maskEditDataEmissao.Text := formatdatetime('yyyy-mm-dd', now);
 end;
 
 end.

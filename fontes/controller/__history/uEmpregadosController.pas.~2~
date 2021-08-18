@@ -1,0 +1,16 @@
+unit uEmpregadosController;
+
+interface
+
+type
+  TEmpregadosController = class
+
+  public
+    function Cadastrar (CodDepartamento, CodSuperior: Integer; NomeEmpregado,
+      Funcao: String; DataAdmissao: TDate; Salario, Comissao: Double): Boolean;
+  end;
+implementation
+
+uses uDmEmpregados, Empregados;
+
+end.
