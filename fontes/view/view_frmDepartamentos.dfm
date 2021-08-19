@@ -92,4 +92,20 @@ object CadastroDepartamentos: TCadastroDepartamentos
     TabOrder = 4
     OnClick = btnCadastrarClick
   end
+  object btnImprimir: TButton
+    Left = 406
+    Top = 294
+    Width = 75
+    Height = 50
+    Caption = 'Imprimir'
+    TabOrder = 5
+    OnClick = btnImprimirClick
+  end
+  object PdtReportDepartamentos: TPdtPrintDAT
+    ObjectToPrint = DBGDepartamentos
+    ReportId = '(522.773)'
+    Version = '1.81.00 LITE'
+    Left = 296
+    Top = 304
+  end
 end

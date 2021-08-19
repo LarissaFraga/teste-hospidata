@@ -5,13 +5,12 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, ZAbstractConnection, ZConnection,
-  Vcl.StdCtrls;
+  Vcl.StdCtrls, PrintDAT;
 
 type
   TMenuPrincipal = class(TForm)
     btnEmpregados: TButton;
     btnDepartamentos: TButton;
-    btnGerarRelatorio: TButton;
     procedure btnDepartamentosClick(Sender: TObject);
     procedure btnEmpregadosClick(Sender: TObject);
   private

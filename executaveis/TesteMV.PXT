@@ -1,0 +1,18 @@
+[(522.773)]
+NewRpt=0
+ColMaxWidths=~Line#:0,codigo_empregado:0,nome_empregado:0,funcao:0,salario:0,comissao:0,codigo_departamento:0,nome_departamento:0,local:0
+NumFixedCols=1
+MaxMemoColWidTxt=50
+MaxMemoLines=5
+PreviewZoomLevel=100
+TextFontName=Courier New
+CreateDate=20210818.195440
+LastSaveDate=20210818.195600
+Memo,Copyright,MemoXPosPer=5
+Memo,Copyright,MemoWidPer=90
+Memo,Copyright,MemoMarginTxt=0,1,0,0
+Memo,PgNum=START
+^DL^PC^TR
+Memo,PgNum=END
+
+

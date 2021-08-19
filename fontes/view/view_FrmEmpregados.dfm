@@ -162,7 +162,7 @@ object CadastroEmpregados: TCadastroEmpregados
   object maskEditDataEmissao: TMaskEdit
     Left = 139
     Top = 75
-    Width = 121
+    Width = 117
     Height = 21
     Hint = 'aaaa-mm-dd'
     EditMask = '!0000-00-00;1;_'
@@ -191,5 +191,21 @@ object CadastroEmpregados: TCadastroEmpregados
     MaxLength = 7
     TabOrder = 9
     Text = '    ,  '
+  end
+  object btnImprimir: TButton
+    Left = 414
+    Top = 328
+    Width = 75
+    Height = 50
+    Caption = 'Imprimir'
+    TabOrder = 10
+    OnClick = btnImprimirClick
+  end
+  object PdtReportEmpregados: TPdtPrintDAT
+    ObjectToPrint = DBGEmpregados
+    ReportId = '(522.773)'
+    Version = '1.81.00 LITE'
+    Left = 280
+    Top = 336
   end
 end

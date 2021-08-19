@@ -99,11 +99,33 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\fontes\view\view_frmPrincipal.pas">
-            <Form>Form1</Form>
+            <Form>MenuPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\fontes\dataModulo\DmConexao.pas">
+        <DCCReference Include="..\fontes\dataModulo\uDmConexao.pas">
             <Form>Conexao</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\fontes\view\view_frmDepartamentos.pas">
+            <Form>CadastroDepartamentos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\fontes\view\view_FrmEmpregados.pas">
+            <Form>CadastroEmpregados</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\fontes\model\Departamentos.pas"/>
+        <DCCReference Include="..\fontes\model\Empregados.pas"/>
+        <DCCReference Include="..\fontes\controller\uEmpregadosController.pas"/>
+        <DCCReference Include="..\fontes\controller\uDepartamentosController.pas"/>
+        <DCCReference Include="..\fontes\dataModulo\uDmEmpregados.pas">
+            <Form>DmEmpregados</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\fontes\dataModulo\uDmDepartamento.pas">
+            <Form>DmDepartamento</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>

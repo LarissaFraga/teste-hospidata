@@ -2,8 +2,8 @@ object MenuPrincipal: TMenuPrincipal
   Left = 0
   Top = 0
   Caption = 'MenuPrincipal'
-  ClientHeight = 195
-  ClientWidth = 500
+  ClientHeight = 170
+  ClientWidth = 462
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object MenuPrincipal: TMenuPrincipal
   PixelsPerInch = 96
   TextHeight = 13
   object btnEmpregados: TButton
-    Left = 184
-    Top = 64
+    Left = 264
+    Top = 56
     Width = 137
     Height = 73
     Caption = 'Cadastrar Empregados'
@@ -23,20 +23,12 @@ object MenuPrincipal: TMenuPrincipal
     OnClick = btnEmpregadosClick
   end
   object btnDepartamentos: TButton
-    Left = 24
-    Top = 64
+    Left = 48
+    Top = 56
     Width = 137
     Height = 73
     Caption = 'Cadastrar Departamentos'
     TabOrder = 1
     OnClick = btnDepartamentosClick
-  end
-  object btnGerarRelatorio: TButton
-    Left = 344
-    Top = 64
-    Width = 137
-    Height = 73
-    Caption = 'Gerar relat'#243'rio'
-    TabOrder = 2
   end
 end
