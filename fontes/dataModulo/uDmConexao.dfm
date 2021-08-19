@@ -1,7 +1,7 @@
 object Conexao: TConexao
   OldCreateOrder = False
-  Height = 219
-  Width = 429
+  Height = 131
+  Width = 269
   object Conexao: TFDConnection
     Params.Strings = (
       'Database=hospidata'
